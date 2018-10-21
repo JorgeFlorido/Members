@@ -12,6 +12,10 @@
                     controller: 'memberController',
                     templateUrl: '/app/templates/member.html'
                 })
+                .when('/adduser', {
+                    controller: 'addMemberController',
+                    templateUrl: '/app/templates/addMember.html'
+                })
                 .otherwise({ redirectTo: '/'});
         }]);
 })();

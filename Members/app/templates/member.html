@@ -1,4 +1,5 @@
 ﻿<h2>Member</h2>
+<a href="#/adduser" class="btn btn-primary">Create new</a>
 <div class="panel panel-default">
     <div class="panel-heading">
         List Member
@@ -14,12 +15,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="i in users">
-                    <th>{{i.Name + ' ' + i.Surname}}</th>
-                    <th>{{i.Address}}</th>
-                    <th>{{i.Email}}</th>
-                    <th>{{i.Phone}}</th>
-                </tr>
+            <tr ng-repeat="i in users">
+                <td>{{i.Name + ' ' + i.Surname}}</td>
+                <td>{{i.Address}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Phone}}</td>
+            </tr>
+            <tr ng-if="!users || users.length == 0">
+                <td colspan="4" style="text-align: center">No data to display</td>
+            </tr>
             </tbody>
         </table>
     </div>
