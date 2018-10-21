@@ -8,19 +8,17 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Surname</th>
+                    <th>Address</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Address</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="i in users">
-                    <th>{{i.Name}}</th>
-                    <th>{{i.Surname}}</th>
+                    <th>{{i.Name + ' ' + i.Surname}}</th>
+                    <th>{{i.Address}}</th>
                     <th>{{i.Email}}</th>
                     <th>{{i.Phone}}</th>
-                    <th>{{i.Address}}</th>
                 </tr>
             </tbody>
         </table>
